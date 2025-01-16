@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  web:
+    image: 590183791756.dkr.ecr.ap-south-1.amazonaws.com/secureopsflow:latest
+    container_name: SecureOpsFlow_container
+    ports:
+      - "8080:80"
+    networks:
+      - SecureOpsFlow_network
+
+networks:
+  SecureOpsFlow_network:
+    driver: bridge
